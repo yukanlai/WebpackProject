@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack",
+    "serve": "webpack-dev-server"  
+    // purpose behind these single-line commands or single-statement commands 
+    // is to avoid having to install these modules globally
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
   "author": "",
