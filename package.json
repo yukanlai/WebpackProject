@@ -5,15 +5,14 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && webpack",
-    "serve": "webpack-dev-server"  
-    // purpose behind these single-line commands or single-statement commands 
-    // is to avoid having to install these modules globally
+    "build": "NODE_ENV=production npm run clean && webpack -p",
+    "serve": "webpack-dev-server"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.15.2",
     "faker": "^3.1.0",
     "lodash": "^4.17.2",
     "react": "^15.4.1",
@@ -31,7 +30,9 @@
     "babel-preset-env": "^1.1.4",
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.26.1",
+    "html-webpack-plugin": "^2.28.0",
     "style-loader": "^0.13.1",
-    "webpack": "2.2.0-rc.0"
+    "webpack": "2.2.0-rc.0",
+    "webpack-dev-middleware": "^1.10.2"
   }
 }
